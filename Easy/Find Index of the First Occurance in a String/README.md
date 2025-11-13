@@ -26,4 +26,4 @@ Iterate through the haystack and compare each character with the needle. When ch
 The runtime depends on the length of the haystack and the length of the needle at a linear level.
 
 ## Space Complexity - O(1)
-The code does not use any dynamic data structure.
+No data structure variables with `n` size are used.

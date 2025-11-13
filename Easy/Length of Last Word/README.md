@@ -32,4 +32,4 @@ Reverse iteration through the string and return the length of the last word.
 The code is a basic loop through the string with no complex operations.
 
 ## Space Complexity - O(1)
-The space complexity is constant.
+No data structure variables with `n` size are used.

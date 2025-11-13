@@ -24,5 +24,5 @@ Use the first string as a reference prefix. Compare the characters of the prefix
 ## Time Complexity: O(n x m)
 Each iteration of n words in strs will iterate through a maximum of m characters of the prefix.
 
-## Space Complexity: O(1)
+## Space Complexity: O(n)
 The size of prefix depends on the input. It can only decrease in size throughout the iterations.

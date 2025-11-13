@@ -41,7 +41,7 @@ Given a roman numeral, convert it to an integer.
 ### Constraints:
 - 1 <= `s.length` <= 15
 - `s` contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
-- It is guaranteed that `s` is a valid roman numeral in the range **[1, 3999]**.
+- It is guaranteed that `s` is a valid roman numeral in the range `[1, 3999]`.
 
 ## Strategy
 Map each roman numeral to its corresponding integer value. Run through the string and sum the values of each roman character. 
@@ -52,4 +52,4 @@ If the value of the current character is greater than the previous one, subtract
 The funciton runs a for loop through the string once. No complex operations are performed under the iteration.
 
 ## Space Complexity - O(1)
-The variables have constant size.
+No data structure variables with `n` size are used.

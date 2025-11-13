@@ -53,4 +53,4 @@ Iterate through the array and increment `k` if the element is not equal to `val`
 The code involves a simple loop with no complexed operations.
 
 ## Space Complexity - O(1)
-All variables have costant size.
+No data structure variables with `n` size are used.
