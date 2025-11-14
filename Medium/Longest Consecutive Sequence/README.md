@@ -17,8 +17,8 @@ You must write an algorithm that runs in **O(n)** time.
 ***Output:*** 9
 
 ### Constraints:
-- 0 <= `nums.length` <= 105
-- -109 <= `nums[i]` <= 109
+- 0 <= `nums.length` <= 10^5
+- -10^9 <= `nums[i]` <= 10^9
 
 ## Strategy
 Iterate through the an hashset generated from input array. Keep trying to remove each element's previous and next values from the hashset with a while loop. Return the longest removal streak.
