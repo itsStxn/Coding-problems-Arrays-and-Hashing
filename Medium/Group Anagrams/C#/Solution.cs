@@ -1,23 +1,26 @@
-﻿namespace Group_Anagrams;
+﻿using System;
+
+namespace Group_Anagrams;
 
 
 public class Solution {
-    private string HashFunction(string s) {
-        char[] chars = s.ToCharArray();
-        Array.Sort(chars);
+	public IList<IList<string>> GroupAnagrams(string[] strs) {
+		Dictionary<string, List<string>> groups = [];
 
-        return new(chars);
-    }
-    public IList<IList<string>> GroupAnagrams(string[] strs) {
-        Dictionary<string, List<string>> anagramsMap = [];
+		foreach (string s in strs) {
+			int[] freq = new int[26];
+			foreach (char c in s)
+				freq[c - 'a']++;
 
-        foreach (string s in strs) {
-            string key = HashFunction(s);
-            if (anagramsMap.TryGetValue(key, out List<string>? val)) {
-                val.Add(s);
-            } else anagramsMap.Add(key, [s]);
-        }
+			string key = string.Join(',', freq);
+			if (!groups.TryGetValue(key, out var group)) {
+				group = [];
+				groups.Add(key, group);
+			}
 
-        return [..anagramsMap.Values];
-    }
+			group.Add(s);
+		}
+
+		return [..groups.Values];
+	}
 }
