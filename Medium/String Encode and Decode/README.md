@@ -21,13 +21,17 @@ Constraints:
 ## Strategy
 Encode the input list with the length of each string along with a special character and then the string itself. Decode by reading each character of the encoded string. Each time that a special character is encountered, the string is read with a loop for the length of the specified string.
 
-## Time Complexity - O(n)
+## Time Complexity
 
-### Encode
-It loops through the list of strings with no time complex operations. 
+### Encode - O(n)
+It simply uses `string.join` method. 
 
-### Decode
-It loops through the encoded string and has a nested loop. The nested loop actually keeps shifting the iterator forward, so it does not pause the outer iteration. Hence, the time complexity is still linear.
+### Decode - 0(n*m)
+It loops through the list of strings and each string's `m` characters.
 
-## Space Complexity - O(n)
-Both the functions have to add space to store n characters, where n is the concatenated length of all the strings.
+## Space Complexity
+### Encode - O(n*m)
+It simply returns the result of `string.join` method, basically the sum of each word's characters. 
+
+### Decode - 0(n)
+The results are `n` words in a list.
