@@ -24,13 +24,17 @@ Use a hash table to count the number of times each element appears in the array.
 Use either a priority queue or a bucket list to store the top `k` elements.
 
 ### Priority Queue
-It allows you to enqueue a number and its count while also dequeue the number with the smallest count. Dequeu when the queue length is longer than `k`.
+It allows you to enqueue a number and its count while also dequeue the number with the smallest count. Dequeue when the queue length is longer than `k`.
 
 ### Bucket List
-Group numbers by their count. Then iterate through the list from the highest count possible, which is n. Run the loop until finding the top `k` numbers.
+Group numbers by their count. Then iterate through the list from the highest count possible, which is `n`. Run the loop until finding the top `k` numbers.
 
-## Time Complexity - O(n)
-The loops on each approach iterate n times and do not inplement more time complex operations.
+## Time Complexity
+### Bucket List - O(n)
+The loops iterate `n` times and do not inplement more time complex operations.
+
+### Priority Queue - O(n*logk)
+The heapify operation is logk, and it executes for each number.
 
 ## Space Complexity - O(n)
-The dynamic data structures on each approach use n space.
+The dynamic data structures on each approach use `n` space.
