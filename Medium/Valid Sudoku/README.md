@@ -53,5 +53,5 @@ Represent the rows, columns, and sub-boxes as arrays of hashsets. Run through ea
 ## Time Complexity - O(n)
 The runtime depends on the number of cells in the board.
 
-## Space Complexity - O(n)
-Each array stores the number of cells in the board.
+## Space Complexity - O(1)
+The board stores 9 lists, and each list and hashset stores 9 strings. Size is constant.
