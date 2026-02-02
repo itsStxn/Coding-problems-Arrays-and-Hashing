@@ -1,33 +1,28 @@
-﻿namespace Longest_Consecutive_Sequence;
+﻿using System;
 
+namespace Longest_Consecutive_Sequence;
 
 public class Solution {
 	public int LongestConsecutive(int[] nums) {
-		if (nums.Length == 0) return 0;
+		int n = nums.Length;
+		if (n == 0) return 0;
 		
-		HashSet<int> numsSet = new(nums);
-		int longestSequence = 0;
+		HashSet<int> set = [..nums];
+		int ans = 0;
 
-		for (int i = 0; i < nums.Length; i++) {
-			int num = nums[i];
-			if (numsSet.Remove(num)) {
-				bool foundPrev = true;
-				bool foundNext = true;
-				int prev = num - 1;
-				int next = num + 1;
-				int streak = 1;
+		foreach (int num in set.ToArray()) {
+			if (set.Contains(num - 1))
+				continue;
 
-				while (foundPrev || foundNext) {
-					foundPrev = foundPrev && numsSet.Remove(prev--);
-					foundNext = foundNext && numsSet.Remove(next++);
-					if (foundPrev) streak++;
-					if (foundNext) streak++;
-				}
-				longestSequence = Math.Max(longestSequence, streak);
-				if (numsSet.Count == 0) break;
-			}
+			int seq = 1;
+			int search = num;
+			while (set.Remove(++search)) seq++;
+
+			ans = Math.Max(ans, seq);
+			if (ans == n) break;
 		}
 
-		return longestSequence;
+		return ans;
 	}
 }
+

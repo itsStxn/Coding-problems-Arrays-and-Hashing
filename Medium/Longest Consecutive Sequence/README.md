@@ -21,10 +21,10 @@ You must write an algorithm that runs in **O(n)** time.
 - -10^9 <= `nums[i]` <= 10^9
 
 ## Strategy
-Iterate through the an hashset generated from input array. Keep trying to remove each element's previous and next values from the hashset with a while loop. Return the longest removal streak.
+Iterate through the an hashset generated from input array. Process only the numbers that do not have a previous one in the set. Keep removing those number's next values from the hashset. Return the longest removal streak.
 
 ## Time Complexity - O(n)
-Generating a hashset from the input array takes `n` time. Also, the loop tries to remove from the hashset each element's previous and next values. 
+Generating a hashset from the input array takes `n` time. Also, the loop detects sequence starters and tries to remove the sequence from the hashset. 
 
 ## Space Complexity - O(n)
 The hashset is generated from the input array.
