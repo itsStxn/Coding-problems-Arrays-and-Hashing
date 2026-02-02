@@ -24,7 +24,7 @@ You must write an algorithm that runs in **O(n)** time.
 Iterate through the an hashset generated from input array. Keep trying to remove each element's previous and next values from the hashset with a while loop. Return the longest removal streak.
 
 ## Time Complexity - O(n)
-The is hashset generated from the input array. Also, the loop tries to remove from the hashset each element's previous and next values. 
+Generating a hashset from the input array takes `n` time. Also, the loop tries to remove from the hashset each element's previous and next values. 
 
 ## Space Complexity - O(n)
 The hashset is generated from the input array.
