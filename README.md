@@ -3,6 +3,7 @@
 ## Difficulties
 
 ### Easy
+
 - Check Dom
 - Contains Duplicate
 - Find Index of the First Occurance in a String
@@ -17,6 +18,7 @@
 - Valid Anagram
 
 ### Medium
+
 - Group Anagrams
 - Longest Consecutive Sequence
 - Product of Array Except Self
@@ -24,6 +26,7 @@
 - Valid Sudoku
 
 ## Patterns
+
 - Data stored in a **linear array**
 - Requires **single pass or multiple passes**
 - Frequent use of **hash map / dictionary**
