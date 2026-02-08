@@ -4,4 +4,4 @@ Solution task = new();
 
 Console.WriteLine(task.IsAnagram("rat", "car"));
 Console.WriteLine(task.IsAnagram("anagram", "nagaram"));
-Console.WriteLine(task.IsAnagram_Unicode("anagram&", "&nagaram"));
+Console.WriteLine(task.IsAnagram("anagram&", "&nagaram"));
