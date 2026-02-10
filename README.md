@@ -23,6 +23,8 @@
 - Product of Array Except Self
 - Top K Frequent Elements
 - Valid Sudoku
+- Rotate Array
+- Next Permutation
 
 ## Patterns
 
