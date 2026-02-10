@@ -10,7 +10,6 @@
 - Length of Last Word
 - Longest Common Prefix
 - Plus One
-- Remove Duplicates from Sorted Array
 - Remove Element
 - Roman to Integer
 - Two Sum
