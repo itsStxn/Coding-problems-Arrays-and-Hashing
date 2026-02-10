@@ -24,9 +24,15 @@ You must write an algorithm that runs in **O(n)** time and without using the div
 *(The output array does not count as extra space for space complexity analysis.)*
 
 ## Strategy
-Create the `answer` array. Iterate through `nums` contemporarily from left and right pointers. 
+Create an answer array `ans`. Keep track of products using a variable `prod`. Traverse nums twice: forward and backward.
 
-Use the pointers to insert the right and left accumulations to `answer`. Accumulate the current numbers from both directions.  
+Going forward:
+- Calculate the product each time
+- The calculated product is assigned to the next index in `ans`
+
+Going backward:
+- Calculate the product each time
+- The calculated product is accumulated to the previous index in `ans`
 
 ## Time Complexity - O(n)
 The code runs a single loop that traverses the array once. The operations in the loop take constant time.

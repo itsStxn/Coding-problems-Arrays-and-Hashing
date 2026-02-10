@@ -1,28 +1,24 @@
-﻿namespace Product_of_Array_Except_Self;
+﻿using System;
 
+namespace Product_of_Array_Except_Self;
 
-public class Solution
-{
-    public int[] ProductExceptSelf(int[] nums) {
-        int n = nums.Length;
-        int[] answer = new int[n];
-        int L_product = 1, R_product = 1;
+public class Solution {
+	public int[] ProductExceptSelf(int[] nums) {
+		int n = nums.Length;
+		var ans = new int[n];
 
-        for (
-            int L = 0, R = n - 1;
-            L < n && R >= 0;
-            L++, R--
-        ) {
-            if (L <= R) {
-                answer[L] = 1;
-                answer[R] = 1; 
-            }
-            answer[L] *= L_product; 
-            L_product *= nums[L];
-            answer[R] *= R_product; 
-            R_product *= nums[R];
-        }
+		int prod = 1;
+		for (int i = 0; i < n; i++) {
+			ans[i] = prod;
+			prod *= nums[i];
+		}
 
-        return answer;
-    }
+		prod = 1;
+		for (int i = n - 1; i >= 0; i--) {
+			ans[i] *= prod;
+			prod *= nums[i];
+		}
+
+		return ans;
+	}
 }
